@@ -12,5 +12,8 @@
         "48": "48.svg",
         "128": "128.svg"
     },
-    "permissions": []
+    "permissions": [],
+    "chrome_url_overrides": {
+      "newtab": "newtab.html"
+    }
 }
