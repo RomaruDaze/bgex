@@ -1,5 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import Background from "./components/background";
 ReactDOM.render(React.createElement(React.StrictMode, null,
-    React.createElement(App, null)), document.getElementById("root"));
+    React.createElement(Background, null)), document.getElementById("root"));
