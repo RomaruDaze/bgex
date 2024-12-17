@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Background() {
   const [imagePath, setImagePath] = useState<string>("");
@@ -20,9 +20,7 @@ function Background() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-    >
-      {/* Your homepage content goes here */}
-    </div>
+    ></div>
   );
 }
 

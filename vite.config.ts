@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc'
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
@@ -15,11 +15,17 @@ export default defineConfig({
     }),
   ],
   build: {
-    outDir: 'build',
+    outDir: 'dist',
     rollupOptions: {
       input: {
-        main: './index.html',
+        main: './src/main.tsx',
+        newtab: './src/newtab.tsx'
       },
-    },
+      output: {
+        entryFileNames: '[name].js',
+        format: 'es'
+      }
+    }
   },
+  publicDir: 'public',
 });
