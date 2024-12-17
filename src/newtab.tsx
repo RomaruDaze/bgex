@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Background from "./components/background";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Background />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
