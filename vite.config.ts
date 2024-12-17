@@ -18,8 +18,7 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        main: './src/main.tsx',
-        newtab: './src/newtab.tsx'
+        newtab: './src/newtab.tsx',
       },
       output: {
         entryFileNames: '[name].js',
