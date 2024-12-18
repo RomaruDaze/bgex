@@ -7,7 +7,6 @@ const WeatherCard: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [currentTime, setCurrentTime] = useState<Date>(new Date());
 
-  // Function to determine the time of day
   const getTimeOfDayClass = (): string => {
     const currentHour = currentTime.getHours();
     return currentHour >= 6 && currentHour < 18 ? "daytime" : "nighttime";
@@ -50,12 +49,10 @@ const WeatherCard: React.FC = () => {
       setError("Geolocation is not supported by this browser");
     }
 
-    // Update the current time every second
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
 
-    // Cleanup the interval on component unmount
     return () => clearInterval(timer);
   }, []);
 
