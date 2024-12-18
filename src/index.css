@@ -294,7 +294,7 @@ html {
     flex-direction: column;
     align-items: center;
     height: 180px;
-    width: 280px;
+    width: 380px;
     border-radius: 25px;
     background: transparent;
     overflow: hidden;
@@ -370,6 +370,7 @@ html {
     height: 100%;
     padding-right: 18px;
     z-index: 1;
+    margin-top: 10px;
 }
 
 .right-side>div {
@@ -379,16 +380,16 @@ html {
 }
 
 .hour {
-    font-size: 15pt;
+    font-size: 18pt;
     line-height: 1em;
 }
 
 .date {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .city {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 /* ---------- Background Card ---------- */
@@ -409,7 +410,7 @@ html {
 .circle:nth-child(1) {
     position: absolute;
     top: -80%;
-    right: -50%;
+    right: -40%;
     width: 300px;
     height: 300px;
     opacity: 0.4;
@@ -418,7 +419,7 @@ html {
 
 .circle:nth-child(2) {
     position: absolute;
-    top: -70%;
+    top: -60%;
     right: -30%;
     width: 210px;
     height: 210px;
@@ -428,8 +429,8 @@ html {
 
 .circle:nth-child(3) {
     position: absolute;
-    top: -35%;
-    right: -8%;
+    top: -30%;
+    right: -15%;
     width: 100px;
     height: 100px;
     opacity: 1;
