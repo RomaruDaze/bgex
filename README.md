@@ -70,8 +70,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or feedback, please contact me:
-
 [![GitHub](https://img.icons8.com/ios-glyphs/30/FFFFFF/github.png)](https://github.com/RomaruDaze)
 [![Instagram](https://img.icons8.com/ios-glyphs/30/FFFFFF/instagram-new.png)](https://www.instagram.com/romaru._/)
 [![X](https://img.icons8.com/ios-glyphs/30/FFFFFF/twitterx.png)](https://www.x.com/romarudaze)
