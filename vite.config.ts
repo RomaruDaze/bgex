@@ -10,6 +10,14 @@ export default defineConfig({
         {
           src: 'public/manifest.json',
           dest: '.',
+        },
+        {
+          src: 'src/index.css',
+          dest: '.',
+        },
+        {
+          src: 'index.html',
+          dest: '.',
         }
       ],
     }),
@@ -18,7 +26,7 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        newtab: './src/newtab.tsx',
+        newtab: './src/Main.tsx',
       },
       output: {
         entryFileNames: '[name].js',
