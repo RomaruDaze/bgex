@@ -28,7 +28,7 @@ const WeatherCard: React.FC = () => {
       code >= 0 &&
       code <= 4
     ) {
-      return "https://img.icons8.com/ios/100/FFFFFF/crescent-moon.png";
+      return "https://img.icons8.com/ios/100/FFFFFF/bright-moon--v1.png";
     }
   };
 
