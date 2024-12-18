@@ -75,9 +75,11 @@ function Shortcut({ shortcuts, onAddShortcut }: ShortcutProps) {
     } else if (new URL(formattedUrl).hostname.includes("calendar.google.com")) {
       iconUrl = "https://img.icons8.com/color/480/google-calendar--v2.png";
     } else if (new URL(formattedUrl).hostname.includes("spotify.com")) {
-      iconUrl = "https://img.icons8.com/external-tal-revivo-color-tal-revivo/100/external-spotify-a-swedish-audio-streaming-platform-that-provides-drm-protected-logo-color-tal-revivo.png";
+      iconUrl =
+        "https://img.icons8.com/external-tal-revivo-color-tal-revivo/100/external-spotify-a-swedish-audio-streaming-platform-that-provides-drm-protected-logo-color-tal-revivo.png";
     } else {
-      iconUrl = "https://img.icons8.com/color/480/cancel--v1.png";
+      iconUrl =
+        "https://www.google.com/s2/favicons?sz=256&domain=" + formattedUrl;
     }
 
     if (isEditing && editIndex !== null) {
