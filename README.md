@@ -72,7 +72,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any questions or feedback, please contact me:
 
-- [@RomaruDaze](https://github.com/RomaruDaze)
-- [@RomaruDaze](https://www.instagram.com/romaru._/)
-- [@RomaruDaze](https://www.x.com/romarudaze)
-- [@RomaruDaze](https://romarudaze.github.io/)
+- [![GitHub](https://img.icons8.com/ios-glyphs/30/000000/github.png)](https://github.com/RomaruDaze)
+- [![Instagram](https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png)](https://www.instagram.com/romaru._/)
+- [![X](https://img.icons8.com/ios-glyphs/30/000000/twitter.png)](https://www.x.com/romarudaze)
+- [![Website](https://img.icons8.com/ios-glyphs/30/000000/domain.png)](https://romarudaze.github.io/)
