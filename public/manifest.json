@@ -6,7 +6,7 @@
     "48": "/icons/48.svg",
     "128": "/icons/128.svg"
   },
-  "version": "0.1",
+  "version": "1.0.0",
   "description": "A customable homepage extension for Chrome",
   "action": {
     "default_icon": "/icons/16.svg"
