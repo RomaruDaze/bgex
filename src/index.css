@@ -19,7 +19,8 @@ html {
 }
 
 
-/* Background */
+/*---------- Background ----------*/
+
 .background {
     height: 100vh;
     width: 100vw;
@@ -33,7 +34,7 @@ html {
 }
 
 
-/* Searchbar */
+/*---------- Searchbar ----------*/
 
 .searchbar {
     font-size: 14px;
@@ -141,7 +142,7 @@ html {
     margin-right: 12px;
 }
 
-/* Shortcuts */
+/*---------- Shortcuts ----------*/
 
 .shortcuts {
     display: grid;
@@ -277,7 +278,7 @@ html {
     background-color: #ababab;
 }
 
-/* Footer */
+/*---------- Footer ----------*/
 
 .footer {
     position: absolute;
@@ -285,7 +286,7 @@ html {
     bottom: 0;
 }
 
-/* Weather */
+/*---------- Weather ----------*/
 
 .card {
     display: flex;
@@ -389,7 +390,7 @@ html {
     font-size: 15px;
 }
 
-/* ---------- Background ---------- */
+/* ---------- Background Card ---------- */
 .background-design {
     position: absolute;
     height: 100%;
