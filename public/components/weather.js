@@ -41,6 +41,10 @@ var WeatherCard = function () {
     var _c = useState("Unknown City"), city = _c[0], setCity = _c[1];
     var _d = useState(null), error = _d[0], setError = _d[1];
     var _e = useState(new Date()), currentTime = _e[0], setCurrentTime = _e[1];
+<<<<<<< HEAD
+=======
+    // Function to determine the time of day
+>>>>>>> 126dec79a8b74c2def93ce3a8cd90732ed47d806
     var getTimeOfDayClass = function () {
         var currentHour = currentTime.getHours();
         return currentHour >= 6 && currentHour < 18 ? "daytime" : "nighttime";
@@ -80,9 +84,17 @@ var WeatherCard = function () {
         else {
             setError("Geolocation is not supported by this browser");
         }
+<<<<<<< HEAD
         var timer = setInterval(function () {
             setCurrentTime(new Date());
         }, 1000);
+=======
+        // Update the current time every second
+        var timer = setInterval(function () {
+            setCurrentTime(new Date());
+        }, 1000);
+        // Cleanup the interval on component unmount
+>>>>>>> 126dec79a8b74c2def93ce3a8cd90732ed47d806
         return function () { return clearInterval(timer); };
     }, []);
     var fetchWeatherData = function (lat, lon) { return __awaiter(void 0, void 0, void 0, function () {

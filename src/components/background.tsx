@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import SearchBar from "./searchbar";
 import Shortcut from "./Shortcut";
 import Footer from "./footer";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 126dec79a8b74c2def93ce3a8cd90732ed47d806
 function Background() {
   const [imagePath, setImagePath] = useState<string>("");
   const [shortcuts, setShortcuts] = useState<{ url: string; icon: string }[]>(
