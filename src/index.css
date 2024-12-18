@@ -337,14 +337,14 @@ html {
 }
 
 .weather-icon img {
-    width: 80%;
+    width: 100%;
     height: auto;
 }
 
 .weather {
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .weather-description {
