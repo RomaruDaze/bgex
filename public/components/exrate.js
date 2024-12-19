@@ -68,7 +68,7 @@ function Exrate() {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    url = "http://worldtimeapi.org/api/timezone/Etc/GMT";
+                    url = "https://api.open-meteo.com/v1/forecast?latitude=".concat(lat, "&longitude=").concat(lon, "&hourly=temperature_2m,weathercode&current_weather=true");
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 4, , 5]);
@@ -78,7 +78,12 @@ function Exrate() {
                     return [4 /*yield*/, response.json()];
                 case 3:
                     data = _a.sent();
-                    setCurrentTime(new Date(data.datetime));
+                    if (data.current_weather && data.current_weather.time) {
+                        setCurrentTime(new Date(data.current_weather.time));
+                    }
+                    else {
+                        console.error("Failed to fetch current weather time");
+                    }
                     return [3 /*break*/, 5];
                 case 4:
                     error_1 = _a.sent();

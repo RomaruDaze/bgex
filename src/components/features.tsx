@@ -1,6 +1,7 @@
 import React from "react";
 import Exrate from "./exrate";
 import Weather from "./weather";
+import Calendar from "./calendar";
 
 function Features() {
   return (
@@ -8,6 +9,7 @@ function Features() {
       <Weather />
       <div className="features-double">
         <Exrate />
+        <Calendar />
       </div>
     </div>
   );

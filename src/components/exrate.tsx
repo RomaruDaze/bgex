@@ -36,12 +36,16 @@ function Exrate() {
   }, []);
 
   const fetchLocalTime = async (lat: number, lon: number) => {
-    const url = `http://worldtimeapi.org/api/timezone/Etc/GMT`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,weathercode&current_weather=true`;
 
     try {
       const response = await fetch(url);
       const data = await response.json();
-      setCurrentTime(new Date(data.datetime));
+      if (data.current_weather && data.current_weather.time) {
+        setCurrentTime(new Date(data.current_weather.time));
+      } else {
+        console.error("Failed to fetch current weather time");
+      }
     } catch (error) {
       console.error("Failed to fetch local time");
     }
