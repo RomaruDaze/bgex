@@ -301,8 +301,7 @@ html {
     transition: 100ms ease;
     box-shadow: rgba(0, 0, 0, 0.15) 2px 3px 4px;
     position: absolute;
-    bottom: 0;
-    right: 0;
+
     margin-bottom: 10px;
     margin-right: 10px;
     transform: scale(1);
