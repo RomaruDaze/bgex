@@ -30,11 +30,11 @@ function Footer(_a) {
     }, [isTooltipVisible]);
     return (React.createElement("div", { className: "footer" },
         React.createElement("img", { src: "https://img.icons8.com/fluency-systems-filled/144/FFFFFF/settings.png", alt: "Settings", onClick: toggleTooltip, style: { cursor: "pointer" } }),
+        React.createElement("p", null, "Settings"),
         isTooltipVisible && (React.createElement("div", { className: "tooltip", ref: tooltipRef },
             React.createElement("ul", null,
                 React.createElement("li", { className: selectedOption === "Mono" ? "default-option" : "", onClick: function () { return handleOptionClick("Mono"); } }, "Mono"),
                 React.createElement("li", { className: selectedOption === "City" ? "default-option" : "", onClick: function () { return handleOptionClick("City"); } }, "City"),
-                React.createElement("li", { className: selectedOption === "Newjeans" ? "default-option" : "", onClick: function () { return handleOptionClick("NewJeans"); } }, "Newjeans")))),
-        React.createElement("img", { src: "https://img.icons8.com/material-outlined/100/FFFFFF/image.png", alt: "Image" })));
+                React.createElement("li", { className: selectedOption === "Newjeans" ? "default-option" : "", onClick: function () { return handleOptionClick("NewJeans"); } }, "Newjeans"))))));
 }
 export default Footer;
