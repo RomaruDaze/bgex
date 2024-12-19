@@ -64,7 +64,7 @@ function Footer({ onOptionSelect }: FooterProps) {
             </li>
             <li
               className={selectedOption === "Newjeans" ? "default-option" : ""}
-              onClick={() => handleOptionClick("Newjeans")}
+              onClick={() => handleOptionClick("NewJeans")}
             >
               Newjeans
             </li>

@@ -34,7 +34,7 @@ function Footer(_a) {
             React.createElement("ul", null,
                 React.createElement("li", { className: selectedOption === "Mono" ? "default-option" : "", onClick: function () { return handleOptionClick("Mono"); } }, "Mono"),
                 React.createElement("li", { className: selectedOption === "City" ? "default-option" : "", onClick: function () { return handleOptionClick("City"); } }, "City"),
-                React.createElement("li", { className: selectedOption === "Newjeans" ? "default-option" : "", onClick: function () { return handleOptionClick("Newjeans"); } }, "Newjeans")))),
+                React.createElement("li", { className: selectedOption === "Newjeans" ? "default-option" : "", onClick: function () { return handleOptionClick("NewJeans"); } }, "Newjeans")))),
         React.createElement("img", { src: "https://img.icons8.com/material-outlined/100/FFFFFF/image.png", alt: "Image" })));
 }
 export default Footer;
