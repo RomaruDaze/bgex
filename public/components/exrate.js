@@ -40,6 +40,7 @@ function Exrate() {
     var _a = useState(null), rates = _a[0], setRates = _a[1];
     var _b = useState(true), loading = _b[0], setLoading = _b[1];
     var _c = useState(null), currentTime = _c[0], setCurrentTime = _c[1];
+    var _d = useState(false), isNightMode = _d[0], setIsNightMode = _d[1];
     useEffect(function () {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
@@ -62,9 +63,11 @@ function Exrate() {
             console.error("Error fetching exchange rates:", error);
             setLoading(false);
         });
+        var currentHour = new Date().getHours();
+        setIsNightMode(currentHour < 6 || currentHour >= 18);
     }, []);
     var fetchLocalTime = function (lat, lon) { return __awaiter(_this, void 0, void 0, function () {
-        var url, response, data, error_1;
+        var url, response, data, fetchedTime, localTime, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -79,7 +82,9 @@ function Exrate() {
                 case 3:
                     data = _a.sent();
                     if (data.current_weather && data.current_weather.time) {
-                        setCurrentTime(new Date(data.current_weather.time));
+                        fetchedTime = new Date(data.current_weather.time);
+                        localTime = new Date(fetchedTime.getTime() + fetchedTime.getTimezoneOffset() * 60000);
+                        setCurrentTime(localTime);
                     }
                     else {
                         console.error("Failed to fetch current weather time");
@@ -93,16 +98,10 @@ function Exrate() {
             }
         });
     }); };
-    var getTimeOfDayClass = function () {
-        if (!currentTime)
-            return "daytime";
-        var currentHour = currentTime.getHours();
-        return currentHour >= 6 && currentHour < 18 ? "daytime" : "nighttime";
-    };
     if (loading || !currentTime) {
         return React.createElement("div", null, "Loading...");
     }
-    return (React.createElement("div", { className: "exrate-card ".concat(getTimeOfDayClass()) },
+    return (React.createElement("div", { className: "calendar ".concat(isNightMode ? "nighttime" : "daytime") },
         React.createElement("h2", null, "Rates"),
         React.createElement("div", { className: "exrate-rates" },
             React.createElement("div", { className: "exrate-rate" },

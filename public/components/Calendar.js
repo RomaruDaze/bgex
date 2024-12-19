@@ -9,13 +9,9 @@ function Calendar() {
     var currentMonth = today.getMonth();
     var currentYear = today.getFullYear();
     var currentDate = today.getDate();
-    // Get the first day of the month
     var firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
-    // Get the number of days in the current month
     var daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-    // Create an array for the days of the month
     var daysArray = Array.from({ length: daysInMonth }, function (_, i) { return i + 1; });
-    // Create an array for the empty slots before the first day of the month
     var emptySlots = Array.from({ length: firstDayOfMonth }, function () { return null; });
     return (React.createElement("div", { className: "calendar ".concat(isNightMode ? "nighttime" : "daytime") },
         React.createElement("h2", null,

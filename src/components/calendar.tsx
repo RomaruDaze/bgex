@@ -12,17 +12,9 @@ function Calendar() {
   const currentMonth = today.getMonth();
   const currentYear = today.getFullYear();
   const currentDate = today.getDate();
-
-  // Get the first day of the month
   const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
-
-  // Get the number of days in the current month
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-  // Create an array for the days of the month
   const daysArray = Array.from({ length: daysInMonth }, (_, i) => i + 1);
-
-  // Create an array for the empty slots before the first day of the month
   const emptySlots = Array.from({ length: firstDayOfMonth }, () => null);
 
   return (

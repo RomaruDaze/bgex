@@ -7,6 +7,7 @@ function Exrate() {
   } | null>(null);
   const [loading, setLoading] = useState(true);
   const [currentTime, setCurrentTime] = useState<Date | null>(null);
+  const [isNightMode, setIsNightMode] = useState(false);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -33,6 +34,9 @@ function Exrate() {
         console.error("Error fetching exchange rates:", error);
         setLoading(false);
       });
+
+    const currentHour = new Date().getHours();
+    setIsNightMode(currentHour < 6 || currentHour >= 18);
   }, []);
 
   const fetchLocalTime = async (lat: number, lon: number) => {
@@ -42,7 +46,11 @@ function Exrate() {
       const response = await fetch(url);
       const data = await response.json();
       if (data.current_weather && data.current_weather.time) {
-        setCurrentTime(new Date(data.current_weather.time));
+        const fetchedTime = new Date(data.current_weather.time);
+        const localTime = new Date(
+          fetchedTime.getTime() + fetchedTime.getTimezoneOffset() * 60000
+        );
+        setCurrentTime(localTime);
       } else {
         console.error("Failed to fetch current weather time");
       }
@@ -51,20 +59,12 @@ function Exrate() {
     }
   };
 
-  const getTimeOfDayClass = (): string => {
-    if (!currentTime) return "daytime";
-    const currentHour = currentTime.getHours();
-    return currentHour >= 6 && currentHour < 18 ? "daytime" : "nighttime";
-  };
-
-  console.log(getTimeOfDayClass());
-
   if (loading || !currentTime) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div className={`exrate-card ${getTimeOfDayClass()}`}>
+    <div className={`calendar ${isNightMode ? "nighttime" : "daytime"}`}>
       <h2>Rates</h2>
       <div className="exrate-rates">
         <div className="exrate-rate">
