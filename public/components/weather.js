@@ -47,24 +47,24 @@ var WeatherCard = function () {
     };
     var getWeatherIcon = function (code) {
         var currentHour = currentTime.getHours();
+        var iconUrl = "";
         if (currentHour >= 6 && currentHour < 18 && code >= 0 && code <= 4) {
-            return "https://img.icons8.com/ios/100/FFFFFF/sun--v1.png";
+            iconUrl = "https://img.icons8.com/ios/100/FFFFFF/sun--v1.png";
         }
         else if (code >= 45 && code <= 67) {
-            return "https://img.icons8.com/ios/100/FFFFFF/rain--v1.png";
+            iconUrl = "https://img.icons8.com/ios/100/FFFFFF/rain--v1.png";
         }
         else if (code >= 71 && code <= 86) {
-            return "https://img.icons8.com/ios/100/FFFFFF/snow.png";
+            iconUrl = "https://img.icons8.com/ios/100/FFFFFF/snow.png";
         }
         else if (code === 95 || code === 96 || code === 99) {
-            return "https://img.icons8.com/ios/100/FFFFFF/cloud-lighting--v1.png";
+            iconUrl = "https://img.icons8.com/ios/100/FFFFFF/cloud-lighting--v1.png";
         }
-        else if (currentHour >= 18 &&
-            currentHour < 24 &&
-            code >= 0 &&
-            code <= 4) {
-            return "https://img.icons8.com/ios/100/FFFFFF/bright-moon--v1.png";
+        else if ((currentHour >= 0 && currentHour < 6) ||
+            (currentHour >= 18 && currentHour < 24 && code >= 0 && code <= 4)) {
+            iconUrl = "https://img.icons8.com/ios/100/FFFFFF/bright-moon--v1.png";
         }
+        return iconUrl;
     };
     useEffect(function () {
         if (navigator.geolocation) {
