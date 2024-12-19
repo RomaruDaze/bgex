@@ -8,6 +8,7 @@ BGEX is a React-based web application that provides a customizable new tab exper
 - **Search Bar**: Allows users to search directly from the new tab page.
 - **Shortcuts**: Users can add, edit, and delete shortcuts to their favorite websites.
 - **Weather Information**: Displays current weather information based on the user's location.
+- **Exchange Rate**: Displays the exchange rate of the user's local currency to USD and IDR.
 
 ## Installation
 
@@ -40,6 +41,14 @@ BGEX is a React-based web application that provides a customizable new tab exper
    ```bash
    npm run preview
    ```
+
+## Chrome Extension Installation
+
+1. **Install BGEX**
+2. **Extract the compressed folder**
+3. **Open Chrome browser**
+4. **Navigate to settings and extensions**
+5. **On the top left corner, select 【Load Unpack】and select the installed BGEX**
 
 ## Usage
 

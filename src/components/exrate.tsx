@@ -57,6 +57,8 @@ function Exrate() {
     return currentHour >= 6 && currentHour < 18 ? "daytime" : "nighttime";
   };
 
+  console.log(getTimeOfDayClass());
+
   if (loading || !currentTime) {
     return <div>Loading...</div>;
   }
