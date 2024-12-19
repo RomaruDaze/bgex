@@ -49,6 +49,7 @@ function Footer({ onOptionSelect }: FooterProps) {
       />
       {isTooltipVisible && (
         <div className="tooltip" ref={tooltipRef}>
+          <div className="tooltip-triangle"></div>
           <ul>
             <li
               className={selectedOption === "Mono" ? "default-option" : ""}
@@ -71,6 +72,10 @@ function Footer({ onOptionSelect }: FooterProps) {
           </ul>
         </div>
       )}
+      <img
+        src="https://img.icons8.com/material-sharp/100/FFFFFF/online-store.png"
+        alt="Image"
+      />
     </div>
   );
 }
