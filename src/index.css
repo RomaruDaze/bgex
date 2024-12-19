@@ -297,7 +297,7 @@ html {
     right: 0;
 }
 
-.tooltip {
+.shortcut-tooltip {
     position: absolute;
     top: 0;
     left: 0;
@@ -307,7 +307,7 @@ html {
     z-index: 200;
 }
 
-.tooltip button {
+.shortcut-tooltip button {
     background-color: transparent;
     padding: 10px;
     border-radius: 5px;
@@ -316,7 +316,7 @@ html {
     transition: background-color 0.3s ease;
 }
 
-.tooltip button:hover {
+.shortcut-tooltip button:hover {
     background-color: #ababab;
 }
 

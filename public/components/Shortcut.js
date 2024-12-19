@@ -192,7 +192,7 @@ function Shortcut(_a) {
                     e.currentTarget.src =
                         "https://img.icons8.com/ios-filled/100/help.png";
                 } }))); }),
-        tooltip.visible && (React.createElement("div", { className: "tooltip", style: { top: tooltip.y, left: tooltip.x, position: "absolute" } },
+        tooltip.visible && (React.createElement("div", { className: "shortcut-tooltip", style: { top: tooltip.y, left: tooltip.x, position: "absolute" } },
             React.createElement("button", { onClick: handleEditShortcut }, "Edit"),
             React.createElement("button", { onClick: handleDeleteShortcut }, "Delete"))),
         React.createElement("button", { className: "shortcut-button-add", onClick: function () {

@@ -173,7 +173,7 @@ function Shortcut({ shortcuts, onAddShortcut }: ShortcutProps) {
       ))}
       {tooltip.visible && (
         <div
-          className="tooltip"
+          className="shortcut-tooltip"
           style={{ top: tooltip.y, left: tooltip.x, position: "absolute" }}
         >
           <button onClick={handleEditShortcut}>Edit</button>
