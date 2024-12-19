@@ -47,6 +47,7 @@ function Footer({ onOptionSelect }: FooterProps) {
         onClick={toggleTooltip}
         style={{ cursor: "pointer" }}
       />
+      <p>Settings</p>
       {isTooltipVisible && (
         <div className="tooltip" ref={tooltipRef}>
           <ul>
