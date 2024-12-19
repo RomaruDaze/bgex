@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SearchBar from "./searchbar";
 import Shortcut from "./Shortcut";
-import Footer from "./footer";
+import Features from "./features";
 
 function Background() {
   const [imagePath, setImagePath] = useState<string>("");
@@ -27,9 +27,9 @@ function Background() {
         backgroundImage: `url(${imagePath})`,
       }}
     >
+      <Features />
       <SearchBar />
       <Shortcut shortcuts={shortcuts} onAddShortcut={addShortcut} />
-      <Footer />
     </div>
   );
 }

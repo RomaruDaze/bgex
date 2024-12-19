@@ -10,7 +10,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 import React, { useEffect, useState } from "react";
 import SearchBar from "./searchbar";
 import Shortcut from "./Shortcut";
-import Footer from "./footer";
+import Features from "./features";
 function Background() {
     var _a = useState(""), imagePath = _a[0], setImagePath = _a[1];
     var _b = useState([]), shortcuts = _b[0], setShortcuts = _b[1];
@@ -26,8 +26,8 @@ function Background() {
     return (React.createElement("div", { className: "background", style: {
             backgroundImage: "url(".concat(imagePath, ")"),
         } },
+        React.createElement(Features, null),
         React.createElement(SearchBar, null),
-        React.createElement(Shortcut, { shortcuts: shortcuts, onAddShortcut: addShortcut }),
-        React.createElement(Footer, null)));
+        React.createElement(Shortcut, { shortcuts: shortcuts, onAddShortcut: addShortcut })));
 }
 export default Background;
