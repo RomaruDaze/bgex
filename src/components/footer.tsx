@@ -71,10 +71,6 @@ function Footer({ onOptionSelect }: FooterProps) {
           </ul>
         </div>
       )}
-      <img
-        src="https://img.icons8.com/material-outlined/100/FFFFFF/image.png"
-        alt="Image"
-      />
     </div>
   );
 }
